@@ -14,7 +14,7 @@ kivy.require('1.11.1')
 
 grocery_list = '/storage/emulated/0/Groceries.txt'
 
-if (kivy.utils.platform == 'android'):
+if (kivy.utils.platform != 'android'):
     grocery_list = os.path.join(os.environ['HOME'], 'Groceries.txt')
 
     
