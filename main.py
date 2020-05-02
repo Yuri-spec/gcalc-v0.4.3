@@ -5,18 +5,17 @@ from kivy.properties import ObjectProperty
 from kivy.utils import platform
 from kivy.uix.label import Label
 from kivy.uix.button import Button
+#from android.permissions import request_permissions, Permission
 import os
 import kivy
-kivy.require('1.11.1')
 
+kivy.require('1.11.1')
+#request_permissions([Permission.READ_EXTERNAL_STORAGE])
 
 grocery_list = os.path.join(os.environ['HOME'], 'Groceries.txt')
 
 if (kivy.utils.platform == 'android'):
     grocery_list = '/storage/emulated/0/Groceries.txt'
-    from android.permissions import request_permissions, Permission
-    request_permissions([Permission.READ_EXTERNAL_STORAGE])
-
 
 class Grocery:
     def __init__(self, name):
