@@ -51,11 +51,13 @@
                     root.manager.current = 'add'
             Label:
                 text: 'Total Value:'
+                text_size: self.size
+                valign: 'middle'
+                halign: 'right'
             Label:
                 id: total_value
                 font_size: self.height - 65
                 bold: True
-
 
 <AddItems>:
     entry: entry
