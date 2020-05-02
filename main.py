@@ -12,11 +12,12 @@ import kivy
 kivy.require('1.11.1')
 #request_permissions([Permission.READ_EXTERNAL_STORAGE])
 
-grocery_list = os.path.join(os.environ['HOME'], 'Groceries.txt')
+grocery_list = '/storage/emulated/0/Groceries.txt'
 
 if (kivy.utils.platform == 'android'):
-    grocery_list = '/storage/emulated/0/Groceries.txt'
+    grocery_list = os.path.join(os.environ['HOME'], 'Groceries.txt')
 
+    
 class Grocery:
     def __init__(self, name):
         # info
